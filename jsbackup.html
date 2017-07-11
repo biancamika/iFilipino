@@ -1,0 +1,126 @@
+<script type="text/javascript">
+  var checker = localStorage.getItem("yetti");
+  if ( checker == 0 ){
+document.getElementById("wordspace").innerHTML = 'You are not allowed to enter this site - you were banned, remember? ';
+exit();
+} 
+  var NText1 = 'Please enter a name.<br/><input type="text" id="userInput"></input>  <button onclick="getname()">Submit</button>';
+  document.getElementById("wordspace").innerHTML = NText1;
+ 
+ function getname() {
+  var userInputRaw = document.getElementById("userInput").value;
+  localStorage.setItem("pname", userInputRaw);
+  var userInput = userInputRaw.toUpperCase(); 
+  var Confirm = 'Your name is ' + userInputRaw + '. Is this correct?<br/><button onclick="choice0()">Yes</button><button onclick="main()">No</button>'
+ document.getElementById("wordspace").innerHTML = Confirm;   
+ }
+ function choice0() {
+ var player = localStorage.getItem("pname");
+ var text0 = '<h2>Welcome to IFilipino, ' + player +'!</h2>Here, you can get updates of the government<br/>';
+ var text1 = '<h2>Recommended Stories</h2><div class="rec"><span class="box">Duterte Wins Something</span><span class="box">Duterte is COOL</span></div>'
+var text2 = '<h2>Recommended Friends</h2><div class="rec"><span class="box">Rodrigo Duterte</span><span class="box">Alan Cayetano</span></div>'
+var text3 = '<h2>Recommended Groups</h2><div class="rec"><span class="box">Duterte Youth Organization<button onclick="choice11()">Join</button><button onclick="choice12()">Skip</button></span></div>'
+var text7 = 'You may post something. What do you say?<br/><a onclick="choice21()">Go Duterte!!!!!!!!!!</a><br/><a onclick="choice22()">Duterte should be impeached</a>';
+var text9 = '<i>nothing so far</i>'
+ document.getElementById("wordspace").innerHTML = text0;
+ document.getElementById("recStory").innerHTML = text1;
+ document.getElementById("recFriends").innerHTML = text2;
+ document.getElementById("recGroup").innerHTML = text3;
+ document.getElementById("postarea").innerHTML = text7;
+ document.getElementById("posts").innerHTML = text9;
+ }
+ function choice11() {
+ var text4 = '<h2>Recommended Groups</h2><div class="rec"><span class="box">Duterte Youth Organization<i class="joined">Joined</i></span>'
+document.getElementById("recGroup").innerHTML = text4;
+}
+function choice12() {
+ var text5 = '<h2>Recommended Groups</h2><br/><div class="rec"><span class="box"><b>Are you sure?</b><button onclick="choice122()">Yes</button><button onclick="choice11()">No</button></spann</div>'
+document.getElementById("recGroup").innerHTML = text5;
+}
+function choice122() {
+ var text6 = '<h2>Recommended Groups</h2><div class="rec"><br/></div>'
+document.getElementById("recGroup").innerHTML = text6;
+alert('Alert. Please Join this group or face the consequences.');
+}
+function choice21() {
+var player = localStorage.getItem("pname");
+var text8 = '<b>' + player + ': </b> Go Duterte!<hr><b>Du30 Administration: </b>Thank you for supporting us. Continue supporting us, too, or else... <hr><br/>';
+var text10 = 'You have learned of a story about Duterte killing a criminal. What do you share? <a onclick="choice23()">Duterte has committed a crime against humanity!</a><br/><a onclick="choice25()">Duterte successfully protects our country yet again!</a>';
+document.getElementById("posts").innerHTML = text8;
+document.getElementById("postarea").innerHTML = text10;
+}
+function choice22() {
+var player = localStorage.getItem("pname");
+var text8 = '<b>' + player + ':</b> Duterte should be impeached.<hr><b>Du30 Administration: </b>Duterte is the greatest president ever to exist - we are dissapointed that you do not believe in that.'  <hr><br/>;
+var text10 = 'You have learned of a story about Duterte killing a criminal. What do you share? <a onclick="choice23()">Duterte has committed a crime against humanity!</a><br/><a onclick="choice24()">Duterte successfully protects our country yet again!</a>';
+document.getElementById("posts").innerHTML = text8;
+document.getElementById("postarea").innerHTML = text10;
+}
+function choice23() {
+var player = localStorage.getItem("pname");
+var text13 = '' + document.getElementById("posts").innerHTML + '<b>' + player + ':</b><i id="thatpost"> Look at this article about Duterte committing crimes against humanity<hr></i><b>Du30 Administration: </b>We are extremely dissapointed that you have shared this story. Please remove it immediately. <hr><br/>';
+var text14 = 'You have a choice. Either you remove your post, gain favor with the government, yet ignore the problem, or keep the post, ensure this problem can be dealt with, but in the process anger the government...<br/><a onclick="choice26()">Keep the Post</a><br/><a onclick="choice27()">Remove the Post</a> ';
+document.getElementById("posts").innerHTML = text13;
+document.getElementById("postarea").innerHTML = text14;
+}
+
+function choice24() {
+var player = localStorage.getItem("pname");
+var text11 = '' + document.getElementById("posts").innerHTML + '<b>' + player + ':</b> Look at this article about Duterte protecting our country<hr><b>Du30 Administration: </b> We see you have made the right choice and decided to support our great president Duterte.<hr><br/>';
+var text12 = 'Enter Text Here?'
+document.getElementById("posts").innerHTML = text11;
+document.getElementById("postarea").innerHTML = text12;
+}
+
+function choice25() {
+var player = localStorage.getItem("pname");
+var text15 = '' + document.getElementById("posts").innerHTML +  '<b>' + player + ':</b> Look at this article about Duterte protecting our country<hr><b>Du30 Administration: </b>We are grateful for your continued patronage of the Duterte Administration. Keep it up!   <hr><br/>';
+var text16 = 'Enter stuff here ';
+document.getElementById("posts").innerHTML = text15;
+document.getElementById("postarea").innerHTML = text16;
+}
+function choice26() {
+var player = localStorage.getItem("pname");
+var text17 = '' + document.getElementById("posts").innerHTML + '<b>Anonymous: </b>I agree with this. I appreciate how there are some people who believe in the truth...<hr><b>Billy: </b>THIS IS FALSE!!! DUTERTE COULD NEVER DO SUCH A THING  <hr><br/>';
+
+var text18 = 'The post is becoming viral! <br/><a onclick="choice28()">Continue</a><br/>';
+document.getElementById("posts").innerHTML = text17;
+document.getElementById("postarea").innerHTML = text18;
+}
+function choice27() {
+document.getElementById("thatpost").innerHTML = "";
+var player = localStorage.getItem("pname");
+var text19 = '' + document.getElementById("posts").innerHTML + <b>Anonymous: </b>DUTERTE ADMINISTRATION BULLYING PUBLIC INTO SUPPORTING IT!<hr><br/><b>Billy: </b>What is this?!  <hr>';
+
+var text20 = 'Someone has voiced their opinion - the Duterte administration is bullying people into supporting them on social media. They used your deleted post as an example. What do you reply? <br/><a onclick="choice29()">I agree</a><br/><a onclick="choice30()">I disagree; I removed the post out of my own will...</a><br/>';
+document.getElementById("posts").innerHTML = text19;
+document.getElementById("postarea").innerHTML = text20;
+}
+function choice28() {
+var player = localStorage.getItem("pname");
+var textend1 = '<b>Du30 Administration: </b>We are putting an END to this subversive attitude to protect the country. Remember to support our protector Duterte. Good day!<hr><b>Server: </b><font color="red">Anonymous has been banned from iFilipino.  </font><hr><b>Anonymous:</b>WITH  <hr><b>Anonymous: </b>DOWN  <hr><b>Anonymous: </b>We MUST do something about this. We must end this administration. <hr><b>Billy: </b>Thats it. I am reporting you. <hr><b>Anonymous: </b>Look at this website! It is merely a mouthpiece of the administration, a piece of propoganda! Not that its much of an administration. More like a dictatorship. <hr><b>Tom Guy: </b>Could you guys stop fighting?  <hr><b>Billy:</b> </b>DO I CARE? NO! DUTERTE HAS DONE GREAT THINGS  <hr><b>Anonymous: </b>Because Duterte has killed thousands of them and even allowed the law to be bypassed for them to be killed! What has happened to respect of the law?  <hr><b>Billy: </b>Duterte has a high approval rating and has gotten rid of hundreds of thousands of drug users! How could you think he has done wrong?  <hr><b>Anonymous: </b>What Duterte has done is wrong! There is proof, too!<hr><br/>' + document.getElementById("posts").innerHTML;
+var textend12 = '<a onclick="choiceend1()">Continue</a><br/>';
+document.getElementById("posts").innerHTML = textend1;
+document.getElementById("postarea").innerHTML = textend12;
+}
+
+function choice29() {
+var player = localStorage.getItem("pname");
+var text21 = '<b>Billy: </b>I CANNOT BELIEVE THIS! DUTERTE HAS DONE GREAT THINGS<b>Anonymous: </b>See? Proof of what I have just said. <hr><br/><b>' + player + ':</b> I agree!.';
+var text22 = ' <a onclick="choice28()">Continue</a>';
+document.getElementById("posts").innerHTML = text21;
+document.getElementById("postarea").innerHTML = text22;
+}
+function choice30() {
+var player = localStorage.getItem("pname");
+var text23 = '<b>Billy: </b>Exactly.<b>Anonymous: </b>Oh... <hr><br/><b>' + player + ':</b> I disagree; I removed the post out of my own decision.';
+var text24 = ' <a onclick="choice28()">Continue ( not done yet )</a>';
+document.getElementById("posts").innerHTML = text23;
+document.getElementById("postarea").innerHTML = text24;
+}
+
+function choiceend1() {
+document.getElementById("htmlid").innerHTML = 'You have been banned from iFilipino. Do not attempt to return. ';
+localStorage.setItem("yetti", 0);
+}
+ </script>

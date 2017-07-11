@@ -1,0 +1,180 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* background */
+body {
+background-image:url("paper.png");
+}
+
+/*position*/
+h1, h2, h4, #logo, .main {
+position: relative;
+top: 100px;
+}
+
+img {
+padding: 5px 5px 5px 5px;
+}
+
+h1 {
+font-weight:bold;
+font-size: 300%;
+color: #FF3127;
+font-family: 'Russo One', sans-serif;
+text-shadow: 0px 0px 5px #000000;
+padding: 5px 5px 5px 5px;
+}
+
+h2 {
+font-family: 'Libre Franklin', sans-serif;
+font-size:200%;
+font-weight:bold;
+color:white;
+}
+
+h4 {
+font-size:190%;
+font-family: 'Libre Franklin', sans-serif;
+width: 600px;
+color:white;
+}
+
+/* 2nd part */ 
+center h3, center img {
+position:relative;
+top:50px;
+} 
+
+/* button! */
+.main {
+background-color: #FF3127;
+color:white;
+text-decoration:none;
+font-size:200%;
+font-family: 'Libre Franklin', sans-serif;
+padding: 10px 10px 10px 10px;
+box-shadow: 0px 0px 4px #000000;
+}
+
+
+
+/*background*/
+#pic {
+background-image:url("duterte.jpg");
+background-size:100%;
+height:590px;
+}
+
+#pix {
+background-image:url("about.jpg");
+background-size:100%;
+height:590px;
+}
+
+
+/*info*/
+h3 {
+font-size: 200%;
+font-family: 'Libre Franklin', sans-serif;
+width:600px;
+}
+
+/* EXPERIENCE */
+p {
+font-size: 200%;
+font-family: 'Libre Franklin', sans-serif;
+width:600px;
+z-index: -1;
+}
+
+p, input, button {
+position:relative;
+top:50px;
+margin: 0 auto;
+}
+
+/*navigation*/
+ul {
+background-color:#FF3127;
+padding: 10px 10px 10px 10px;
+position:fixed;
+width: 200%;
+z-index: 5; 
+}
+
+li {
+display:inline;
+padding: 10px 10px 10px 10px;
+font-size:150%;
+font-family: 'Libre Franklin', sans-serif;
+color:white;
+z-index: 5; 
+}
+
+li a {
+text-decoration:none;
+color:white;
+font-weight:none;
+z-index: 5; 
+}
+
+li a:active {
+font-weight:bold;
+}
+
+/*aedin*/
+th{ background-color:white; padding:20px;}
+p{margin:auto; margin-left:5%; margin-right:5%;  font-size:1.75vw; }
+table{margin:auto; margin-left:5%; margin-right:5%; width:80%; }
+h1{margin:auto; margin-left:5%; margin-right:5%; }
+h2{margin:auto; margin-left:5%; margin-right:5%; }
+b{ margin:auto; margin-left:5%; margin-right:5%; font-size:1.75vw;}
+/*ul{ font-size:25; margin-left:5%; }
+body{ font-family: "Dejavu Sans", Verdana; color:222222; background-color:BBDDAA; margin:0px;}*/
+.box{ background-color:white; padding:10px; border-color:black; border-style:solid; border-width:2px;}
+.rec{ padding:12px; background-color:#55555; border-color:black; border-style:solid; border-width:2px;}
+.joined{ color:green;}
+.toptext{ font-size:60;    display: inline-block; vertical-align: middle;  }
+#maindiv{  padding:20px; margin:auto; width:75vw; border-color:112211; border-width:3px; border-style:outset; background-color:FFFFFF;}
+#headid{ height:9vw; background-color:white; border-color:113311; border-width:5px; border-style:solid; width:95%; }
